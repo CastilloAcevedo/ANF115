@@ -1,0 +1,7 @@
+alter proc buscar1
+@descripcion varchar(89)
+as 
+begin
+select concat(nivel1,nivel2,nivel3,nivel4,nivel5) as codigo,descripcion,id_plan 
+from plan_de_cuenta where tipo<>'Agrupacion' and descripcion like '%'+@descripcion+'%'
+end 

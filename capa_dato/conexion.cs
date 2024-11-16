@@ -22,11 +22,11 @@ namespace capa_dato
         public conexion()
         {//UsuarioBD
            
-            servidor = "ACVDO\\SQLEXPRESS";//nombre de su motor de base de datos si su motor 
+            servidor = "SQL9001.site4now.net";//nombre de su motor de base de datos si su motor 
             //de base de datos es asi ejenplo(USUARIO -PC\SQLEXPRESS) i les sale error aumentarle una barra(USUARIO-PC\\SQLEXPRESS)
-            usuario = "sa";//el nombre de usuario que crean en su base de datos
-            contraseña = "1234";//la cotrasenadel usuario
-            nombreBD = "sistema_conta13";//nombre de la base de datos
+            usuario = "db_aaf654_anf115_admin";//el nombre de usuario que crean en su base de datos
+            contraseña = "sql123!sa";//la cotrasenadel usuario
+            nombreBD = "db_aaf654_anf115";//nombre de la base de datos
             cmd = new SqlCommand();
         }
 
@@ -107,7 +107,7 @@ namespace capa_dato
 
         public static DataSet EjecutarComan(string cmd)
         {/////////////////////////////////////////////////////USUARIO-PC\\SQLEXPRESS
-            SqlConnection Con = new SqlConnection("Data Source=ACVDO\\SQLEXPRESS;Initial Catalog=sistema_conta13;User ID=sa;Password=1234;TrustServerCertificate=True;");
+            SqlConnection Con = new SqlConnection("Data Source=SQL9001.site4now.net;Initial Catalog=db_aaf654_anf115;User ID=db_aaf654_anf115_admin;Password=sql123!sa;TrustServerCertificate=True;");
             Con.Open();
 
             DataSet ds = new DataSet();
